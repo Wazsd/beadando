@@ -1,0 +1,495 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Navigation Menu */
+.menu {
+  background-color: #2980b9;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+  transition: background 0.3s, color 0.3s;
+  padding: 8px 12px;
+  border-radius: 5px;
+}
+
+.menu a:hover {
+  background: white;
+  color: #2980b9;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+nav ul li {
+  margin: 10px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  padding: 8px 15px;
+  border-radius: 5px;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Aktív menüpont */
+nav ul li a.active, 
+nav ul li a:hover {
+  background-color: white;
+  color: #2980b9;
+}
+
+/* Main Container */
+.main-container {
+  display: flex;
+  padding: 20px;
+  gap: 20px;
+}
+
+/* Aside */
+aside {
+  flex: 1;
+  background: #ecf0f1;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+/* Content */
+.content {
+  flex: 3;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Sections in Content */
+.content section {
+  margin-bottom: 30px;
+}
+
+/* Buttons */
+button {
+  background-color: #2980b9;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  margin: 5px 0;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: #24587a;
+}
+
+/* Canvas, Drop Zone styling */
+#dragMe {
+  width: 100px;
+  height: 100px;
+  background-color: coral;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  margin-bottom: 10px;
+}
+
+#dropZone {
+  width: 150px;
+  height: 150px;
+  border: 2px dashed #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fafafa;
+}
+
+/* Footer */
+footer {
+  background-color: #34495e;
+  color: #fff;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 20px;
+}
+
+#dragMe {
+  width: 100px;
+  height: 100px;
+  background-color: coral;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  margin-bottom: 10px;
+  cursor: grab;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#dropZone {
+  width: 150px;
+  height: 150px;
+  border: 2px dashed #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fafafa;
+  transition: background-color 0.3s ease;
+}
+
+  body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #f4f4f4;
+  }
+
+  h1 {
+    text-align: center;
+    color: #f7ecec;
+  }
+
+  table {
+    width: 50%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+
+  th, td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  tr:hover {
+    background-color: #d1f0ff;
+  }
+
+  canvas {
+    display: block;
+    margin: 30px auto;
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  nav.menu {
+    background-color: #333;
+    overflow: hidden;
+    text-align: center;
+  }
+  
+  nav.menu a {
+    display: inline-block;
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    transition: background 0.3s;
+  }
+  
+  nav.menu a:hover {
+    background-color: #575757;
+  }
+  
+  aside {
+    padding: 10px;
+    background-color: #ddd;
+    text-align: center;
+  }
+
+  /*oojs*/
+  /* Általános stílusok */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f2f5;
+  margin: 0;
+  padding: 0;
+}
+
+/* Tartalom */
+.content {
+  padding: 2rem;
+  max-width: 800px;
+  margin: auto;
+  background: white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  border-radius: 10px;
+}
+
+/* Állatok listája */
+#animalList p {
+  background-color: #e8f5e9;
+  padding: 10px;
+  margin: 10px 0;
+  border-left: 4px solid #4CAF50;
+  border-radius: 5px;
+  font-size: 1.1rem;
+}
+
+/* Lábléc */
+footer {
+  background-color: #4CAF50;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header, footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1em;
+}
+
+nav.menu {
+  background-color: #2980b9;
+  padding: 0.5em;
+  display: flex;
+  gap: 1em;
+}
+
+nav.menu a {
+  color: white;
+  text-decoration: none;
+}
+
+nav.menu a.active {
+  font-weight: bold;
+  text-decoration: none;
+}
+
+aside {
+  background-color: #f4f4f4;
+  padding: 1em;
+}
+
+.content {
+  padding: 2em;
+}
+
+#animalContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  margin-top: 1em;
+}
+
+.card {
+  background-color: #e0f7fa;
+  padding: 1em;
+  border-radius: 10px;
+  width: 150px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Általános */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+  padding: 2rem;
+}
+
+/* Fejléc */
+header {
+  background-color: #2980b9;
+  color: white;
+  padding: 0rem;
+  text-align: center;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
+/* Menü */
+.menu {
+  background-color: #2980b9;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.menu a:hover {
+  background-color: white;
+  color: #2980b9;
+}
+
+/* Szekciók */
+section {
+  background-color: white;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+section h2 {
+  margin-bottom: 1rem;
+  color: #2980b9;
+}
+
+/* Input mezők */
+input[type="text"] {
+  width: 100%;
+  max-width: 400px;
+  padding: 0.6rem;
+  margin: 0.5rem 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+/* Gombok */
+button {
+  background-color: #2980b9;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+button:hover {
+  background-color: #206694;
+}
+
+#statistics {
+  margin-top: 1.5rem;
+  padding: 1rem 1.5rem;
+  background-color: #dfefff;
+  border-left: 5px solid #2980b9;
+  color: #2c3e50;
+  font-weight: bold;
+  border-radius: 5px;
+  font-size: 1.05rem;
+}
+
+
+
+
+
+
+
+.donut-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.donut {
+  width: 100px;
+  height: 100px;
+  border: 10px solid #ccc;
+  border-top: 10px solid #3498db;
+  border-radius: 50%;
+  animation: spin 1.2s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
