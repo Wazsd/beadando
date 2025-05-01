@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <title>AJAX CRUD menü</title>
+    <script src="../js/ajax.js" defer></script>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+      <h1>Web-programozás-1 Előadás</h1>
+    </header>
+ 
+    <nav class="menu">
+      <a href="index.html">Kezdőlap</a>
+      <a href="table.html">Táblázat</a>
+      <a href="html5.html">HTML5</a>
+      <a href="chart.html">Chart</a>
+      <a href="ajax.html">AJAX</a>
+      <a href="oojs.html">OOJS</a>
+    </nav>
+   
+    <section>
+        <h2>Adatok listázása</h2>
+        <button id="readButton">Adatok betöltése</button>
+        <div id="dataList"></div>
+        <div id="statistics"></div>
+    </section>
+ 
+    <section>
+        <h2>Új adat felvitele (Create)</h2>
+        <input type="text" id="createName" placeholder="Név">
+        <input type="text" id="createHeight" placeholder="Magasság">
+        <input type="text" id="createWeight" placeholder="Súly">
+        <button id="createButton">Létrehozás</button>
+        <div id="createMessage"></div>
+    </section>
+ 
+    <section>
+        <h2>Adatmódosítás (Update)</h2>
+        <input type="text" id="updateId" placeholder="Módosítandó ID">
+        <button id="getDataForId">Adatok betöltése ID alapján</button><br><br>
+        <input type="text" id="updateName" placeholder="Név">
+        <input type="text" id="updateHeight" placeholder="Magasság">
+        <input type="text" id="updateWeight" placeholder="Súly">
+        <button id="updateButton">Módosítás</button>
+        <div id="updateMessage"></div>
+    </section>
+ 
+    <section>
+        <h2>Adat törlése (Delete)</h2>
+        <input type="text" id="deleteId" placeholder="Törlendő ID">
+        <button id="deleteButton">Törlés</button>
+        <div id="deleteMessage"></div>
+    </section>
+ 
+</body>
+</html>
+ 
