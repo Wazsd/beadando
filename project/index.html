@@ -23,16 +23,45 @@
 
   <main class="main-container">
     <aside>
-      <p>Oldalsáv tartalom</p>
-    </aside>
-
-    <div class="content">
-      <p>Ez az index oldal tartalma.</p>
-    </div>
-  </main>
-
-  <footer>
-    <p>Készítette: Budy Benedek - OXQLH4</p>
-  </footer>
-</body>
-</html>
+   <h3>Érdekesség</h3>
+   <p id="randomFact">Betöltés...</p>
+ </aside>
+ 
+     <div class="content">
+       <section>
+         <h2>Fedezd fel a webes technológiákat!</h2>
+         <p>Ez a weboldal különböző funkciókat mutat be, mint például HTML5 elemek, táblázatok, interaktív chartok, AJAX használat és objektumorientált JavaScript.</p>
+       </section>
+       <section>
+         <h2>Tanulj játékosan és gyakorlatiasan</h2>
+         <p>Minden menüpont egy-egy webes technológia szemléltetésére szolgál, kódpéldákkal és működő funkciókkal. Kattints a fenti menüben a téged érdeklő részre!</p>
+       </section>
+     </div>
+   </main>
+ 
+   <footer>
+     <p>Készítette: Budy Benedek - OXQLH4</p>
+   </footer>
+ 
+ 
+   <script>
+     const facts = [
+       "A HTML-t 1993-ban szabványosították először.",
+       "A JavaScriptet 10 nap alatt fejlesztették ki.",
+       "A CSS-ben a színek hexadecimálisan is megadhatók.",
+       "Az első weboldal a CERN-nél futott.",
+       "A favicon egy 16x16 képpont méretű kis ikon.",
+       "A JavaScript nem ugyanaz, mint a Java!",
+       "A responsive design segít, hogy mobilon is jól nézzen ki az oldal.",
+       "Az animációk CSS-sel is megvalósíthatók.",
+       "A legelső weboldal még mindig elérhető online.",
+       "A modern böngészők automatikusan értelmezik a HTML5-öt."
+     ];
+   
+     document.getElementById("randomFact").textContent =
+       facts[Math.floor(Math.random() * facts.length)];
+   </script>
+ 
+ 
+ </body>
+ </html>
