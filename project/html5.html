@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+  <meta charset="UTF-8">
+  <title>HTML5 API Példák</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+  <header>
+    <h1>Játékok</h1>
+  </header>
+
+  <nav class="menu">
+    <a href="index.html">Kezdőlap</a>
+    <a href="table.html">Táblázat</a>
+    <a href="html5.html">HTML5</a>
+    <a href="chart.html">Chart</a>
+    <a href="ajax.html">AJAX</a>
+    <a href="oojs.html">OOJS</a>
+  </nav>
+
+  <aside>
+    <p>HTML5 API példák</p>
+  </aside>
+
+  <div class="content">
+    <h2>HTML5 API példák</h2>
+
+    <section>
+      <h3>Web Storage</h3>
+      <input type="text" id="storageInput" placeholder="Írj be valamit">
+      <button onclick="saveStorage()">Mentés</button>
+      <button onclick="loadStorage()">Betöltés</button>
+      <p id="storageResult"></p>
+    </section>
+
+    <section>
+      <h3>Web Worker</h3>
+      <button id="startWorker">Számítás indítása</button>
+      <p id="workerResult"></p>
+    </section>
+
+    <section>
+      <h3>Geolocation</h3>
+      <button onclick="getLocation()">Helyzet lekérdezése</button>
+      <p id="geoResult"></p>
+      <script src="../js/geo.js"></script>
+    </section>
+
+    <section>
+      <h3>Drag and Drop</h3>
+      <div id="dragMe" draggable="true" style="width:100px;height:100px;background:coral;">Húzz engem</div>
+      <div id="dropZone" style="width:150px;height:150px;border:2px dashed #000;margin-top:10px;"></div>
+      <script src="../js/dnd.js"></script>
+    </section>
+
+    <section>
+      <h3>Canvas</h3>
+      <!-- Canvas elem, amelyre rajzolunk -->
+      <canvas id="myCanvas" width="400" height="200" style="border:1px solid #000000;"></canvas>
+
+     
+    </section>
+
+    <section>
+      <h1>SVG Fa Illusztráció</h1>
+
+      <!-- Fa -->
+      <svg width="200" height="300" xmlns="http://www.w3.org/2000/svg">
+
+        <!-- Ég -->
+        <rect x="0" y="0" width="200" height="250" fill="skyblue" />
+
+        <!-- Felhők -->
+        <circle cx="40" cy="40" r="15" fill="white" />
+        <circle cx="60" cy="40" r="15" fill="white" />
+        <circle cx="50" cy="30" r="15" fill="white" />
+
+        <!-- Törzs -->
+        <rect x="90" y="150" width="20" height="100" fill="brown" />
+
+        <!-- Levelek -->
+        <circle cx="110" cy="120" r="40" fill="green" />
+
+        <!-- Több levelek -->
+        <circle cx="70" cy="100" r="30" fill="green" />
+        <circle cx="130" cy="100" r="30" fill="green" />
+      </svg>
+
+    </section>
+
+    <section>
+      <h3>Server-Sent Events</h3>
+      <button onclick="startSSE()">SSE Indítás</button>
+      <div id="sseOutput"></div>
+    </section>
+
+  </div>
+
+  <footer>
+    <p>Készítette: Készítette: Buday Benedek - OXQLH4</p>
+  </footer>
+
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      const links = document.querySelectorAll('nav a'); 
+      const currentPage = window.location.pathname.split('/').pop(); 
+
+      links.forEach(link => {
+        const linkHref = link.getAttribute('href'); 
+
+        if (linkHref === currentPage) {
+          link.classList.add('active'); 
+        }
+      });
+    });
+  </script>
+
+  <script>
+    document.getElementById("startWorker").addEventListener("click", function () {
+      
+      const worker = new Worker("js/worker.js");
+
+      worker.postMessage("Kezdd el a számítást!");
+
+      worker.onmessage = function (e) {
+        const result = e.data;
+        document.getElementById("result").textContent = `A számítás eredménye: ${result}`;
+        worker.terminate(); 
+      }
+
+      worker.onerror = function (e) {
+        console.error("Hiba történt a worker-ben:", e.message);
+      }
+    });
+  </script>
+
+   <script>
+    var canvas = document.getElementById("myCanvas");
+    var ctx = canvas.getContext("2d");
+
+    var isDrawing = false; 
+
+    
+    canvas.addEventListener("mousedown", function (event) {
+      isDrawing = true;  
+      ctx.beginPath();  
+      ctx.moveTo(event.offsetX, event.offsetY); 
+    });
+
+    
+    canvas.addEventListener("mousemove", function (event) {
+      if (isDrawing) {
+        ctx.lineTo(event.offsetX, event.offsetY);  
+        ctx.stroke();  
+      }
+    });
+
+    canvas.addEventListener("mouseup", function (event) {
+      isDrawing = false;  
+    });
+
+    ctx.lineWidth = 3;  
+    ctx.strokeStyle = "#FF0000";  
+  </script>
+  
+
+  <script src="../js/startWorker.js" defer></script>
+  <script src="../js/workerThread.js"></script>
+  <script src="../js/storage.js"></script>
+  <script src="../js/geo.js"></script>
+  <script src="../js/dnd.js"></script>
+  <script src="../js/canvas.js"></script>
+  <script src="../js/sse.js"></script>
+  <script src="../js/server.js"></script>
+  <script src="../js/tabla.js"></script>
+
+</body>
+
+</html>
