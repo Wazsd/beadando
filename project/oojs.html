@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+  <meta charset="UTF-8">
+  <title>OOJS Példa</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="../js/oojs.js"></script>
+
+</head>
+
+<body>
+  <header>
+    <h1>OOJS Állatok</h1>
+  </header>
+
+  <nav class="menu">
+    <a href="index.html">Kezdőlap</a>
+    <a href="table.html">Táblázat</a>
+    <a href="html5.html">HTML5</a>
+    <a href="chart.html">Chart</a>
+    <a href="ajax.html">AJAX</a>
+    <a href="oojs.html" class="active">OOJS</a>
+  </nav>
+
+  <aside>
+    <p>Objektumorientált JavaScript példa</p>
+  </aside>
+  <div class="content">
+    <h2>Adj hozzá új állatot!</h2>
+
+    <form id="animalForm">
+      <input type="text" id="animalName" placeholder="Állat neve" required>
+      <select id="animalType">
+        <option value="oroszlán">Oroszlán</option>
+        <option value="elefánt">Elefánt</option>
+        <option value="madár">Madár (tud repülni)</option>
+        <option value="repülésképtelen madár">Madár (nem tud repülni)</option>
+      </select>
+      <button type="submit">Hozzáadás</button>
+    </form>
+
+    <div id="animalContainer"></div>
+  </div>
+
+  <footer>
+    <p>Készítette: Győri Kitti - ABC123</p>
+  </footer>
+</body>
+
+</html>
